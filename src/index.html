@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XFST script editor</title>
+</head>
+<body>
+    <div id="leftSide">
+        <div class="header">
+            <h2>Input</h2>
+            <div id="buttons">
+                <label id="run" class="action-btn">
+                    Run
+                </label>
+                <label class="action-btn file-select">
+                    Load
+                    <input id="fload" type="file">
+                </label>
+            </div>    
+        </div>
+        <div id="xfstInput"></div>
+    </div>
+    <div id="rightSide">
+        <div class="header">
+            <h2>Output</h2>
+            <label class="toggle" id="qSwitch">
+                <input id="qSwitchCheck" type="checkbox">
+                <span class="action-btn toggle-text">Quiet mode</span>
+            </label>
+        </div>
+        <div id="xfstOutput"></div>
+        <a id="sourceRef" href="https://github.com/plungingChode/xfst-online">source code</a>
+    </div>
+</body>
+</html>

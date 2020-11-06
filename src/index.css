@@ -1,0 +1,139 @@
+html {
+  font-size: 15pt;
+  color: #D4D4D4;
+  background-color:  #1A1C1D;
+
+  --common-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  max-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  grid-template-rows: 1fr auto;
+  column-gap: -10px;
+}
+
+h2 {
+  margin: 0;
+}
+
+#leftSide {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+#xfstInput {
+  height: 100%;
+  margin-bottom: 10px;
+}
+
+.CodeMirror {
+  height: 100%;
+  max-height: 100%;
+  padding: 5px;
+  cursor: text;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin-bottom: 10px;
+}
+
+.action-btn {
+  color: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #2c2e30;
+  margin-left: 10px;
+  border: none;
+  font-size: 14pt;
+  padding: .5em 2em;
+  min-width: 150px;
+  border-radius: 3px;
+
+  -webkit-box-shadow: var(--common-shadow);
+	-moz-box-shadow: var(--common-shadow);
+  box-shadow: var(--common-shadow);
+  
+  transition: background-color .2s ease-out,
+              box-shadow .2s ease-out;
+}
+
+.action-btn:hover,
+.action-btn:focus {
+  background-color: #373a3d;
+}
+
+.action-btn:active {
+  background-color: #254661;
+}
+
+#buttons {
+  margin-top: 5px;
+}
+
+.file-select {
+  min-width: 150px;
+}
+
+#rightSide {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+#xfstOutput {
+  min-height: 30vh;
+  height: 100%;
+  white-space: pre-wrap;
+  font-family: monospace;
+  line-height: 1.4em;
+
+  background-color: #222425;
+  -webkit-box-shadow: var(--common-shadow);
+	-moz-box-shadow: var(--common-shadow);
+  box-shadow: var(--common-shadow);
+  
+  padding: 10px;
+  cursor: text;
+}
+
+.xfst-err {
+  color: #d4271e;
+}
+
+.xfst-def {
+  color: #569CD6;
+}
+
+
+.toggle {
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+input:checked + .toggle-text {
+  background: #37668d;
+  box-shadow: 0 3px 3px #254661;
+}
+
+.toggle input,
+.file-select input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+#sourceRef {
+  margin-top: 5px;
+  text-align: right;
+  font-size: 10px;
+  text-decoration: none;
+  color: inherit;
+}
