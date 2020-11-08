@@ -6,7 +6,7 @@
     <title>XFST script editor</title>
 </head>
 <body>
-    <div id="leftSide">
+    <div id="left-side">
         <div class="header">
             <h2>Input</h2>
             <div id="buttons">
@@ -17,20 +17,32 @@
                     Load
                     <input id="fload" type="file">
                 </label>
+                <!-- <label class="action-btn file-select">
+                    Save
+                    <input id="fsave" type="file">
+                </label> -->
             </div>    
         </div>
-        <div id="xfstInput"></div>
+        <div id="script-input"></div>
     </div>
-    <div id="rightSide">
+    <div id="right-side">
         <div class="header">
             <h2>Output</h2>
-            <label class="toggle" id="qSwitch">
-                <input id="qSwitchCheck" type="checkbox">
-                <span class="action-btn toggle-text">Quiet mode</span>
-            </label>
+            <div>
+                <label class="toggle">
+
+                    <input id="toggle-autorun" type="checkbox">
+                    <span class="action-btn toggle-text">Auto run</span>
+                </label>
+
+                <label class="toggle">
+                    <input id="toggle-quiet" type="checkbox">
+                    <span class="action-btn toggle-text">Quiet mode</span>
+                </label>
+            </div>
         </div>
-        <div id="xfstOutput"></div>
-        <a id="sourceRef" href="https://github.com/plungingChode/xfst-online">source code</a>
+        <div id="script-output"></div>
+        <a id="source-ref" href="https://github.com/plungingChode/xfst-online">source code</a>
     </div>
 </body>
 </html>
