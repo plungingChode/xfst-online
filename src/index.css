@@ -135,13 +135,20 @@ input:checked + .toggle-text {
   display: none;
 }
 
-#source-ref {
+#links {
   margin-top: 5px;
   text-align: right;
-  font-size: 10px;
+}
+
+#links a {
+  color: #D4D4D4;
+  font-size: 80%;
   text-decoration: none;
-  color: inherit;
-  height: 5%;
+}
+
+.asep {
+  display: inline-block;
+  margin: 0 3px;
 }
 
 @media screen and (max-width: 1300px) {
