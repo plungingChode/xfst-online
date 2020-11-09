@@ -77,13 +77,13 @@ document.addEventListener("keydown", e => {
 })
 
 tgl_quiet.addEventListener("change", e => { 
-    persist["quiet"] = e.target.value;
-    localStorage.setItem("quiet", e.target.value);
+    persist["quiet"] = e.target.checked;
+    localStorage.setItem("quiet", e.target.checked);
     xfst();
 });
 tgl_autorun.addEventListener("change", e => {
-    persist["autorun"] = e.target.value;
-    localStorage.setItem("autorun", e.target.value);
+    persist["autorun"] = e.target.checked;
+    localStorage.setItem("autorun", e.target.checked);
 });
 document.getElementById("run").addEventListener("click", e => { 
     output.innerHTML = "";
@@ -129,9 +129,10 @@ window.addEventListener("load", () => {
     if (persist["script"] === null) 
         persist["script"] = sampleScript;
 
+
     editor.setValue(persist["script"]);
-    tgl_autorun.value = persist["autorun"];
-    tgl_quiet.value = persist["quiet"];
+    tgl_autorun.checked = (persist["autorun"] === "true");
+    tgl_quiet.checked = (persist["quiet"] === "true");
     setEditorSize();
     xfst();
 })
